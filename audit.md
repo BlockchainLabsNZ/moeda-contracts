@@ -46,7 +46,7 @@ The audit report is focused on the following key areas - though this is *not an 
 ## Findings
 ### Minor
 
-**setMigrationAgent** - While testing the correctness of SGTExchanger, we found that it was possible for an owner to call the `setMigrationAgent`() function with regular address passed in. Subsequently, with the regular address being set, it wouldn't be possible to call `migrate()` function or to reset migration agent.
+**setMigrationAgent** - While testing the correctness of `setMigrationAgent`, we found that it was possible for an owner to call the `setMigrationAgent`() function with regular address passed in. Subsequently, with the regular address being set, it wouldn't be possible to call `migrate()` function or to reset migration agent.
 
 However, this is a minor issue because the owner of the contract should know how to call `setMigrationAgent`. Since commit [7fe531a2ab0b3fc217f29eec01061bb3160a7b5e](https://github.com/erkmos/moeda-contracts/commit/7fe531a2ab0b3fc217f29eec01061bb3160a7b5e), an exception is now thrown.
 
